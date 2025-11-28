@@ -40,6 +40,7 @@ from titiler.extensions import (
     stacExtension,
     stacRenderExtension,
     stacViewerExtension,
+    wmsExtension,
 )
 from titiler.mosaic.errors import MOSAIC_STATUS_CODES
 from titiler.mosaic.extensions import MosaicJSONExtension
@@ -130,6 +131,7 @@ if not api_settings.disable_cog:
             cogValidateExtension(),
             cogViewerExtension(),
             stacExtension(),
+            wmsExtension(),
         ],
         enable_telemetry=api_settings.telemetry_enabled,
         templates=titiler_templates,
